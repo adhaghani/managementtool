@@ -1,0 +1,10 @@
+.Box {
+  border-radius: var(--border_rad6);
+  width: 100%;
+}
+.Box.outline {
+  border: 1px solid var(--border-lgray);
+}
+.Box.padding {
+  padding: var(--padding_m);
+}/*# sourceMappingURL=Box.css.map */

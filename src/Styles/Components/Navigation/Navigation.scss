@@ -1,0 +1,48 @@
+.Nav {
+  position: fixed;
+  background-color: var(--bg_colour_offWhite);
+  padding: var(--padding_l);
+}
+
+.Top__Navigation {
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .Action__Container {
+    display: flex;
+    align-items: center;
+    gap: var(--gap_s);
+    span {
+      color: var(--text_colour_black);
+    }
+  }
+}
+
+.Side__Navigation {
+  width: var(--side_nav-width);
+  height: 100%;
+  padding-top: var(--nav-height);
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap_s);
+    a {
+      width: 100%;
+      padding: var(--padding_m);
+      border-radius: var(--border_rad8);
+      font-size: var(--font_size_s);
+      cursor: pointer;
+      &:hover {
+        background-color: var(--bg_colour_white);
+      }
+      &.active {
+        background-color: var(--bg_colour_white);
+      }
+    }
+  }
+}
