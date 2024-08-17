@@ -92,6 +92,11 @@
           }
         }
       }
+      &.input {
+        .Work__Section {
+          padding-top: 0px;
+        }
+      }
     }
   }
 }

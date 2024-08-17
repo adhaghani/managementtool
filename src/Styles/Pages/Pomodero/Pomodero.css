@@ -90,6 +90,9 @@
   color: var(--text_colour_dkgray);
   font-weight: 600;
 }
+.Pomodoro .Input__Section .section.input .Work__Section {
+  padding-top: 0px;
+}
 
 @media screen and (max-width: 768px) {
   .Pomodoro {

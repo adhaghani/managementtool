@@ -1,0 +1,24 @@
+.TodoList .Top__Section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--mg_l);
+}
+.TodoList .Task__Box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: var(--gap_l);
+}
+.TodoList .Task__Box div .Title {
+  font-weight: 500;
+}
+.TodoList .Task__Box div .Droppable__Area {
+  display: grid;
+  gap: var(--gap_m);
+}
+.TodoList .Task__Box .Task__Card {
+  aspect-ratio: 2/1.25;
+  padding: var(--padding_l);
+  background-color: var(--bg_colour_offWhite);
+  border-radius: var(--border_rad8);
+}/*# sourceMappingURL=TodoList.css.map */

@@ -121,7 +121,7 @@ const Pomodero = () => {
       >
         {!startTimer && (
           <>
-            <div className="section">
+            <div className="section input">
               <Box className="Work__Section padding">
                 <h2 className="Title">Focusing Time</h2>
                 <div className="Preset__Container">

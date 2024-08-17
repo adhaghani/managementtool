@@ -1,0 +1,28 @@
+.TodoList {
+  .Top__Section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mg_l);
+  }
+  .Task__Box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--gap_l);
+    div {
+      .Title {
+        font-weight: 500;
+      }
+      .Droppable__Area {
+        display: grid;
+        gap: var(--gap_m);
+      }
+    }
+    .Task__Card {
+      aspect-ratio: 2/1.25;
+      padding: var(--padding_l);
+      background-color: var(--bg_colour_offWhite);
+      border-radius: var(--border_rad8);
+    }
+  }
+}
