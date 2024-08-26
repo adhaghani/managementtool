@@ -17,8 +17,65 @@
   gap: var(--gap_m);
 }
 .TodoList .Task__Box .Task__Card {
-  aspect-ratio: 2/1.25;
   padding: var(--padding_l);
   background-color: var(--bg_colour_offWhite);
   border-radius: var(--border_rad8);
+}
+.TodoList .Task__Box .Task__Card .Task__Title {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.TodoList .Task__Box .Task__Card .Task__Title .Delete__Task {
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+}
+.TodoList .Task__Box .Task__Card .Task__Title h3 {
+  color: var(--text_colour_black);
+}
+.TodoList .Task__Box .Task__Card .Task__Date {
+  color: var(--text_colour_dkgray);
+  font-size: var(--font_size_xs);
+}
+.TodoList .Task__Box .Task__Card .Task__Details {
+  margin-top: var(--mg_s);
+  padding-top: var(--mg_s);
+  border-top: 1px solid var(--border-lgray);
+}
+.TodoList .Task__Box .Task__Card .Task__Details p,
+.TodoList .Task__Box .Task__Card .Task__Details li {
+  color: var(--text_colour_black);
+}
+.TodoList .Task__Box .Task__Card .Task__Details .Details__List li {
+  font-size: var(--font_size_xs);
+}
+.TodoList .AddNew .AddNew__Container .Content__Container {
+  width: 100%;
+}
+.TodoList .AddNew .AddNew__Container .Content__Container label {
+  color: var(--text_colour_lgray);
+}
+.TodoList .AddNew .AddNew__Container .Content__Container textarea {
+  resize: vertical;
+  max-height: 250px;
+}
+.TodoList .AddNew .AddNew__Container .Content__Container .Input__Data.Deletable {
+  position: relative;
+  margin-top: var(--mg_xs);
+}
+.TodoList .AddNew .AddNew__Container .Content__Container .Input__Data.Deletable .InputDeleteButton {
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  background-color: transparent;
+}
+.TodoList .AddNew .AddNew__Container .Content__Container .Input__Data input,
+.TodoList .AddNew .AddNew__Container .Content__Container .Input__Data select,
+.TodoList .AddNew .AddNew__Container .Content__Container .Input__Data textarea {
+  margin-top: var(--mg_s);
+}
+.TodoList .AddNew .AddNew__Container .Content__Container .Input__Data .Input.M-Top-0 {
+  margin-top: 0px;
 }/*# sourceMappingURL=TodoList.css.map */

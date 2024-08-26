@@ -113,6 +113,7 @@ a {
   padding: var(--padding_btn_s);
   font-size: var(--font_size_s);
   text-align: center;
+  cursor: pointer;
 }
 
 .btn_primary {
@@ -121,6 +122,10 @@ a {
   border-radius: var(--border_rad6);
   padding: var(--padding_btn_s);
   font-size: var(--font_size_s);
+  cursor: pointer;
+}
+.Full {
+  width: 100%;
 }
 
 .Input {
@@ -130,12 +135,12 @@ a {
   border-radius: var(--border_rad6);
   background-color: var(--bg_colour_white);
   font-size: var(--font_size_s);
+  color: var(--text_colour_black);
 }
 
 .Input:hover,
 .Input:focus {
-  border: 1px solid var(--bg_colour_dkgray);
-  background-color: var(--bg_colour_absoluteWhite);
+  border: 1px solid var(--bg_colour_lgray);
 }
 
 .Title {
@@ -164,15 +169,20 @@ a {
   width: clamp(130px, 100%, 300px);
 }
 
+.Input__Data {
+  margin-top: var(--mg_m);
+}
+
 body.dark {
   --bg_colour_white: #1a1a1a;
   --bg_colour_offWhite: #252525;
   --bg_colour_black: #fbfbfb;
+  --bg_colour_absoluteWhite: #141414;
   --text_colour_white: #1a1a1a;
   --text_colour_black: #fbfbfb;
   --text_colour_dkgray: #c9c9c9;
   --text_colour_lgray: #979696;
-  --text_colour_absoluteWhite: #fbfbfb;
+  --text_colour_absoluteWhite: #1a1a1a;
   --bg_colour_dkgray: #1a1a1a;
   --bg_colour_lgray: #252525;
   --border-lgray: #4e4e4e;

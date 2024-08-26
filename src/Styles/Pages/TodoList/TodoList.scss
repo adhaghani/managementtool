@@ -19,10 +19,75 @@
       }
     }
     .Task__Card {
-      aspect-ratio: 2/1.25;
       padding: var(--padding_l);
       background-color: var(--bg_colour_offWhite);
       border-radius: var(--border_rad8);
+      .Task__Title {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        .Delete__Task {
+          display: grid;
+          place-items: center;
+          background-color: transparent;
+        }
+        h3 {
+          color: var(--text_colour_black);
+        }
+      }
+      .Task__Date {
+        color: var(--text_colour_dkgray);
+        font-size: var(--font_size_xs);
+      }
+      .Task__Details {
+        margin-top: var(--mg_s);
+        padding-top: var(--mg_s);
+        border-top: 1px solid var(--border-lgray);
+        p,
+        li {
+          color: var(--text_colour_black);
+        }
+        .Details__List {
+          li {
+            font-size: var(--font_size_xs);
+          }
+        }
+      }
+    }
+  }
+  .AddNew {
+    .AddNew__Container {
+      .Content__Container {
+        width: 100%;
+        label {
+          color: var(--text_colour_lgray);
+        }
+        textarea {
+          resize: vertical;
+          max-height: 250px;
+        }
+        .Input__Data {
+          &.Deletable {
+            position: relative;
+            margin-top: var(--mg_xs);
+            .InputDeleteButton {
+              height: 30px;
+              position: absolute;
+              top: 10px;
+              right: 5px;
+              background-color: transparent;
+            }
+          }
+          input,
+          select,
+          textarea {
+            margin-top: var(--mg_s);
+          }
+          .Input.M-Top-0 {
+            margin-top: 0px;
+          }
+        }
+      }
     }
   }
 }

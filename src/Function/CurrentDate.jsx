@@ -1,7 +1,7 @@
 import React from "react";
 
 const CurrentDate = () => {
-  const date = new Date("2024-08-16");
+  const date = new Date();
   const options = {
     weekday: "long",
     day: "numeric",

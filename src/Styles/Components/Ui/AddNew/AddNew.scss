@@ -11,20 +11,13 @@
   justify-content: center;
   align-items: center;
   .AddNew__Container {
-    background-color: var(--bg_colour_white);
+    width: clamp(300px, 100%, 500px);
+    background-color: var(--bg_colour_absoluteWhite);
     padding: var(--padding_l);
     border-radius: var(--border_rad8);
     position: relative;
     .Close {
-      border-radius: 100%;
-      background-color: var(--bg_colour_black);
-      color: var(--text_colour_white);
-      font-weight: 700;
-      aspect-ratio: 1/1;
-      display: grid;
-      place-items: center;
       position: absolute;
-      width: 30px;
       top: 20px;
       right: 20px;
     }

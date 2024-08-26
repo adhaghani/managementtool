@@ -1,6 +1,7 @@
 import React from "react";
 import "../../Styles/Components/Ui/AddNew/AddNew.css";
 import { motion } from "framer-motion";
+import DeleteIcon from "../../assets/svg/DeleteIcon";
 export const AddNew = ({ children, className, enabled, setEnabled }) => {
   document.body.style.overflow = enabled ? "hidden" : "auto";
 
@@ -16,7 +17,7 @@ export const AddNew = ({ children, className, enabled, setEnabled }) => {
         >
           <div className="AddNew__Container">
             <a as="button" className="Close" onClick={() => setEnabled(false)}>
-              {/* TODO: REPLACE X WITH SVG */}x
+              <DeleteIcon />
             </a>
             <div className="Content__Container">{children}</div>
           </div>

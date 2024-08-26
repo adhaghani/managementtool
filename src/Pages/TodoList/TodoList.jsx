@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import { Box } from "../../Components/Ui/Box";
 import "../../Styles/Pages/TodoList/TodoList.css";
 import TaskCard from "./Components/TaskCard";
+import { AddNew } from "../../Components/Ui/AddNew";
+import AddTaskComponent from "./Components/AddTaskComponent";
 const TodoList = () => {
+  const [AddNewTask, setAddNewTask] = useState(false);
   return (
     <div className="TodoList">
       <div className="Top__Section">
         <h2 className="Title">Todo List</h2>
-        <button className="btn_primary">Add new Task</button>
+        <button className="btn_primary" onClick={() => setAddNewTask(true)}>
+          Add new Task
+        </button>
       </div>
-      <Box className="Task__Box padding">
+      <Box className="Task__Box">
         <div>
           <h2 className="Title">Task</h2>
           <Box className="Droppable__Area">
@@ -39,6 +44,13 @@ const TodoList = () => {
           </Box>
         </div>
       </Box>
+      <AddNew
+        className={"Todo"}
+        enabled={AddNewTask}
+        setEnabled={setAddNewTask}
+      >
+        <AddTaskComponent />
+      </AddNew>
     </div>
   );
 };
