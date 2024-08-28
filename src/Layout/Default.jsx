@@ -6,7 +6,7 @@ const Default = () => {
   return (
     <div>
       <Navigation />
-      <main className="Main__Container P-Top P-Left">
+      <main className="Main__Container P-Left">
         <Outlet />
       </main>
     </div>

@@ -1,30 +1,14 @@
 .Nav {
   position: fixed;
-  background-color: var(--bg_colour_offWhite);
   padding: var(--padding_l);
-}
-
-.Top__Navigation {
-  width: 100%;
-  height: var(--nav-height);
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.Top__Navigation .Action__Container {
-  display: flex;
-  align-items: center;
-  gap: var(--gap_s);
-}
-.Top__Navigation .Action__Container span {
-  color: var(--text_colour_black);
 }
 
 .Side__Navigation {
   width: var(--side_nav-width);
   height: 100%;
-  padding-top: var(--nav-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .Side__Navigation ul {
   display: flex;
@@ -33,16 +17,33 @@
   justify-content: center;
   gap: var(--gap_s);
 }
+.Side__Navigation ul h3 {
+  width: 100%;
+  padding: 0px var(--padding_m);
+}
 .Side__Navigation ul a {
   width: 100%;
   padding: var(--padding_m);
   border-radius: var(--border_rad8);
   font-size: var(--font_size_s);
+  display: flex;
+  gap: var(--gap_m);
+  align-items: center;
   cursor: pointer;
 }
 .Side__Navigation ul a:hover {
-  background-color: var(--bg_colour_white);
+  background-color: var(--bg_colour_offWhite);
 }
 .Side__Navigation ul a.active {
-  background-color: var(--bg_colour_white);
+  background-color: var(--bg_colour_offWhite);
+}
+.Side__Navigation .Action__Section {
+  width: 100%;
+  text-align: center;
+}
+.Side__Navigation .Action__Section span {
+  color: var(--text_colour_dkgray);
+}
+.Side__Navigation .Action__Section button {
+  margin-top: var(--mg_s);
 }/*# sourceMappingURL=Navigation.css.map */

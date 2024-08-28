@@ -58,11 +58,12 @@
 .Pomodoro .Input__Section .Preset__Container .Timer__Preset {
   text-align: center;
 }
-.Pomodoro .Input__Section .Preset__Container .Timer__Preset h3 {
+.Pomodoro .Input__Section .Preset__Container .Timer__Preset .Preset__Text {
+  font-size: var(--font_size_m);
+  font-weight: 500;
   color: var(--text_colour_dkgray);
 }
 .Pomodoro .Input__Section .section.current {
-  background-color: var(--bg_colour_offWhite);
   padding: var(--padding_l);
   border-radius: var(--border_rad8);
 }
@@ -83,7 +84,7 @@
   padding: var(--padding_s) 0px;
 }
 .Pomodoro .Input__Section .section.current div.border-bt {
-  border-bottom: 2px solid var(--bg_colour_white);
+  border-bottom: 2px solid var(--bg_colour_offWhite);
 }
 .Pomodoro .Input__Section .section.current div h1 {
   font-size: var(--font_size_l);
@@ -92,6 +93,25 @@
 }
 .Pomodoro .Input__Section .section.input .Work__Section {
   padding-top: 0px;
+}
+.Pomodoro .Input__Section .section.Audio .Work__Section {
+  padding-top: 0px;
+}
+.Pomodoro .Input__Section .section.Audio .Work__Section .Audio__Option {
+  display: flex;
+  align-items: center;
+  gap: var(--gap_l);
+  margin-bottom: var(--mg_s);
+}
+.Pomodoro .Input__Section .section.Audio .Work__Section .Audio__Option .Title {
+  margin-bottom: 0px;
+}
+.Pomodoro .Input__Section .section.Audio .Work__Section .Audio__Option .Input {
+  max-width: 100px;
+}
+.Pomodoro .Input__Section .section.Audio .Work__Section .Audio__Preset {
+  padding: var(--padding_s);
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

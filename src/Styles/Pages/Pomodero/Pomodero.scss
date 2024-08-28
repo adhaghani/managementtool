@@ -57,14 +57,15 @@
       gap: var(--gap_s);
       .Timer__Preset {
         text-align: center;
-        h3 {
+        .Preset__Text {
+          font-size: var(--font_size_m);
+          font-weight: 500;
           color: var(--text_colour_dkgray);
         }
       }
     }
     .section {
       &.current {
-        background-color: var(--bg_colour_offWhite);
         padding: var(--padding_l);
         border-radius: var(--border_rad8);
         p {
@@ -83,7 +84,7 @@
           justify-content: space-between;
           padding: var(--padding_s) 0px;
           &.border-bt {
-            border-bottom: 2px solid var(--bg_colour_white);
+            border-bottom: 2px solid var(--bg_colour_offWhite);
           }
           h1 {
             font-size: var(--font_size_l);
@@ -95,6 +96,27 @@
       &.input {
         .Work__Section {
           padding-top: 0px;
+        }
+      }
+      &.Audio {
+        .Work__Section {
+          padding-top: 0px;
+          .Audio__Option {
+            display: flex;
+            align-items: center;
+            gap: var(--gap_l);
+            margin-bottom: var(--mg_s);
+            .Title {
+              margin-bottom: 0px;
+            }
+            .Input {
+              max-width: 100px;
+            }
+          }
+          .Audio__Preset {
+            padding: var(--padding_s);
+            text-align: center;
+          }
         }
       }
     }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { DeleteIcon } from "../../../assets/svg/Icons";
 
-import DeleteIconNoOutline from "../../../assets/svg/DeleteIconNoOutline";
 const TaskCard = () => {
   const [isDone, setIsDone] = useState(true);
   const [TaskBy, setTaskBy] = useState(null);
@@ -11,7 +11,7 @@ const TaskCard = () => {
         <h3>Task Title</h3>
         {isDone && (
           <button className="Delete__Task">
-            <DeleteIconNoOutline />
+            <DeleteIcon />
           </button>
         )}
       </div>
@@ -28,11 +28,11 @@ const TaskCard = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
           labore?
         </p>
-        <ul className="Details__List">
+        {/* <ul className="Details__List">
           <li>Do This</li>
           <li>Do That</li>
           <li>Dont' Forget to implement this</li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

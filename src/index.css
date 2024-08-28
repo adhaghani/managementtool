@@ -24,7 +24,6 @@
   --text_colour_dkgray: #3a3a3a;
   --text_colour_lgray: #7a7a7a;
   --border-lgray: #cecece;
-  --nav-height: 70px;
   --side_nav-width: 250px;
   --width_container: clamp(300px, 100%, 1200px);
   --padding_l: 20px;
@@ -42,10 +41,9 @@
   --mg_s: 10px;
   --mg_xs: 5px;
   --font_size_xl: clamp(2rem, 10vw, 6rem);
-  --font_size_l: clamp(1.5rem, 3vw, 1.8rem);
-  --font_size_m: clamp(1.1rem, 2vw, 1.3rem);
-  --font_size_s: clamp(0.95rem, 1.5vw, 1rem);
-  --font_size_xs: clamp(0.6rem, 1vw, 0.9rem);
+  --font_size_l: clamp(1.1rem, 2vw, 1.3rem);
+  --font_size_m: clamp(0.95rem, 1.5vw, 1rem);
+  --font_size_s: clamp(0.6rem, 1vw, 0.9rem);
   --border_rad6: 6px;
   --border_rad8: 8px;
   --transition_f: 0.1s;
@@ -65,9 +63,7 @@ body {
   padding: var(--padding_l);
   height: 100vh;
 }
-.P-Top {
-  padding-top: calc(var(--nav-height) + var(--padding_l));
-}
+
 .P-Left {
   padding-left: calc(var(--side_nav-width) + var(--padding_l));
 }
@@ -112,8 +108,15 @@ a {
   border-radius: var(--border_rad6);
   padding: var(--padding_btn_s);
   font-size: var(--font_size_s);
-  text-align: center;
   cursor: pointer;
+  display: flex;
+  gap: var(--gap_s);
+  align-items: center;
+  justify-content: center;
+}
+
+.md {
+  font-size: var(--font_size_m);
 }
 
 .btn_primary {
@@ -121,8 +124,12 @@ a {
   color: var(--text_colour_white);
   border-radius: var(--border_rad6);
   padding: var(--padding_btn_s);
-  font-size: var(--font_size_s);
+  font-size: var(--font_size_m);
   cursor: pointer;
+  display: flex;
+  gap: var(--gap_s);
+  align-items: center;
+  justify-content: center;
 }
 .Full {
   width: 100%;

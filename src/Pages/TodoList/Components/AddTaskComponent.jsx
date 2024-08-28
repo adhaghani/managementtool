@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-import DeleteIconNoOutline from "../../../assets/svg/DeleteIconNoOutline";
+import { DeleteIcon } from "../../../assets/svg/Icons";
 const AddTaskComponent = () => {
   const [DetailsType, setDetailsType] = useState(0);
   const [DataCounter, setDataCounter] = useState(0);
@@ -70,7 +69,7 @@ const AddTaskComponent = () => {
                 onClick={() => handleDelete(index)}
                 className="InputDeleteButton"
               >
-                <DeleteIconNoOutline />
+                <DeleteIcon />
               </button>
             </div>
           ))}

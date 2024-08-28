@@ -4,6 +4,7 @@ import "../../Styles/Pages/TodoList/TodoList.css";
 import TaskCard from "./Components/TaskCard";
 import { AddNew } from "../../Components/Ui/AddNew";
 import AddTaskComponent from "./Components/AddTaskComponent";
+import { AddIcon } from "../../assets/svg/Icons";
 const TodoList = () => {
   const [AddNewTask, setAddNewTask] = useState(false);
   return (
@@ -11,7 +12,7 @@ const TodoList = () => {
       <div className="Top__Section">
         <h2 className="Title">Todo List</h2>
         <button className="btn_primary" onClick={() => setAddNewTask(true)}>
-          Add new Task
+          <AddIcon /> Add new Task
         </button>
       </div>
       <Box className="Task__Box">

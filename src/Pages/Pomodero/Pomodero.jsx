@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box } from "../../Components/Ui/Box";
 import "../../Styles/Pages/Pomodero/Pomodero.css";
 import Preset from "./Components/PresetCard";
+import PresetCardAudio from "./Components/PresetCardAudio";
 import useTimer from "../../Function/useTimer";
 
 import { motion } from "framer-motion";
@@ -14,6 +15,9 @@ const Pomodero = () => {
 
   const [minutesBreak, setminutesBreak] = useState(5);
   const [secondsBreak, setsecondsBreak] = useState(0);
+
+  const [UseAudio, setUseAudio] = useState(0);
+  const [AudioOption, setAudioOption] = useState(null);
 
   const {
     formattedMinutes,
@@ -121,7 +125,41 @@ const Pomodero = () => {
       >
         {!startTimer && (
           <>
-            <div className="section input">
+            <div className="section Audio">
+              <Box className="Work__Section padding">
+                <div className="Audio__Option">
+                  <h2 className="Title">Audio</h2>
+                  <select
+                    name=""
+                    id=""
+                    className="Input Input__Audio"
+                    value={UseAudio}
+                    onChange={(e) => setUseAudio(e.target.value)}
+                  >
+                    <option value={0}>Off</option>
+                    <option value={1}>On</option>
+                  </select>
+                </div>
+                {UseAudio == 1 && (
+                  <>
+                    <div className="Preset__Container">
+                      <input
+                        type="range"
+                        name="volume"
+                        id="volume"
+                        className="Input"
+                        min={0}
+                        max={100}
+                        step={1}
+                      />
+                    </div>
+                    <div className="Preset__Container">
+                      <PresetCardAudio key={1} type="Rain" />
+                      <PresetCardAudio key={2} type="Ticking" />
+                    </div>
+                  </>
+                )}
+              </Box>
               <Box className="Work__Section padding">
                 <h2 className="Title">Focusing Time</h2>
                 <div className="Preset__Container">

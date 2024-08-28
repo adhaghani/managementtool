@@ -11,9 +11,9 @@ const Preset = ({ minutes, seconds, updatesFunction }) => {
   return (
     <div onClick={handleUpdate}>
       <Box className="Timer__Preset outline padding">
-        <h3>
+        <p className="Preset__Text">
           {formattedMinutes}:{formattedSeconds}
-        </h3>
+        </p>
       </Box>
     </div>
   );

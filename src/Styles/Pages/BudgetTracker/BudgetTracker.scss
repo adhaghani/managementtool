@@ -1,0 +1,16 @@
+.BudgetTracker {
+  .Top__Section {
+    display: flex;
+    align-items: center;
+    gap: var(--gap_l);
+    .Title {
+      margin-bottom: 0px;
+    }
+    select.Input {
+      max-width: 300px;
+    }
+  }
+  .budgetContent {
+    margin-top: var(--mg_m);
+  }
+}
