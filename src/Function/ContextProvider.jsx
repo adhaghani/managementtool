@@ -3,13 +3,16 @@ import { createContext, useContext, useState } from "react";
 const StateContext = createContext({
   currentUser: null,
   token: null,
+  IsFullScreen: false,
   setUser: () => {},
-  setToken: () => {}
+  setToken: () => {},
+  setIsFullScreen: () => {}
 });
 
 export const ContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [token, _setToken] = useState("123");
+  const [IsFullScreen, setIsFullScreen] = useState(false);
 
   const setToken = (token) => {
     _setToken(token);
@@ -26,7 +29,9 @@ export const ContextProvider = ({ children }) => {
         user,
         setUser,
         token,
-        setToken
+        setToken,
+        IsFullScreen,
+        setIsFullScreen
       }}
     >
       {children}

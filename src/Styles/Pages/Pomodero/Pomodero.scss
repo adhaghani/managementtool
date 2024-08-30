@@ -16,6 +16,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
       .Timer {
         display: flex;
         align-items: center;
@@ -40,6 +41,11 @@
         button {
           width: 150px;
         }
+      }
+      .FullScreen__Toggle {
+        position: absolute;
+        right: 0;
+        bottom: 0;
       }
     }
   }
@@ -96,27 +102,6 @@
       &.input {
         .Work__Section {
           padding-top: 0px;
-        }
-      }
-      &.Audio {
-        .Work__Section {
-          padding-top: 0px;
-          .Audio__Option {
-            display: flex;
-            align-items: center;
-            gap: var(--gap_l);
-            margin-bottom: var(--mg_s);
-            .Title {
-              margin-bottom: 0px;
-            }
-            .Input {
-              max-width: 100px;
-            }
-          }
-          .Audio__Preset {
-            padding: var(--padding_s);
-            text-align: center;
-          }
         }
       }
     }

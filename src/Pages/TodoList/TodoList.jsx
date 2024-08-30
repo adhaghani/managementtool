@@ -11,7 +11,7 @@ const TodoList = () => {
     <div className="TodoList">
       <div className="Top__Section">
         <h2 className="Title">Todo List</h2>
-        <button className="btn_primary" onClick={() => setAddNewTask(true)}>
+        <button className="btn_outline" onClick={() => setAddNewTask(true)}>
           <AddIcon /> Add new Task
         </button>
       </div>

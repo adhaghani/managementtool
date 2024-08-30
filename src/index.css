@@ -59,13 +59,9 @@ body {
   width: var(--width_container);
 }
 .Main__Container {
-  width: 100%;
   padding: var(--padding_l);
   height: 100vh;
-}
-
-.P-Left {
-  padding-left: calc(var(--side_nav-width) + var(--padding_l));
+  transition: all 0.25s linear;
 }
 /*** Works on common browsers ***/
 ::-moz-selection {

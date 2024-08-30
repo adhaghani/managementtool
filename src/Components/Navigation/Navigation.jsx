@@ -3,10 +3,10 @@ import "../../Styles/Components/Navigation/Navigation.css";
 import { Link } from "react-router-dom";
 import CurrentDate from "../../Function/CurrentDate";
 import Greeting from "../../Function/Greeting";
-
+import { motion } from "framer-motion";
 import { useDarkMode } from "../../Function/useDarkMode";
 import { DarkModeIcon, LightModeIcon } from "../../assets/svg/Icons";
-
+import { useStateContext } from "../../Function/ContextProvider";
 import {
   PomodoroIcon,
   TodoListIcon,
@@ -14,15 +14,22 @@ import {
   BudgetTrackerIcon,
   MeetingSchedulerIcon,
   DashboardIcon,
-  SettingsIcon
+  SettingsIcon,
+  QRCodeIcon
 } from "../../assets/svg/NavigationIcons";
 import BudgetTracker from "../../Pages/BudgetTracking/BudgetTracker";
 const Navigation = () => {
   const { isDarkMode, setIsDarkMode } = useDarkMode();
-
+  const { IsFullScreen } = useStateContext();
   return (
     <>
-      <section className="Nav Side__Navigation">
+      <motion.section
+        className="Nav Side__Navigation"
+        initial={{ x: "0%" }}
+        animate={IsFullScreen ? { x: "-100%" } : { x: 0 }}
+        transition={{ duration: 0.25, ease: "linear" }}
+        exit={{ x: "0%" }}
+      >
         <ul>
           <h3>ManageTool</h3>
           <Link to="/">
@@ -42,6 +49,9 @@ const Navigation = () => {
           </Link>
           <Link to="/calendar">
             <CalendarIcon /> Calendar
+          </Link>
+          <Link to="/qrcodegenerator">
+            <QRCodeIcon /> QR Code Generator
           </Link>
           <Link to="/setting">
             <SettingsIcon /> Settings
@@ -68,7 +78,7 @@ const Navigation = () => {
             )}
           </button>
         </section>
-      </section>
+      </motion.section>
     </>
   );
 };

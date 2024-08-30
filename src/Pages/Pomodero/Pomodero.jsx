@@ -7,6 +7,8 @@ import useTimer from "../../Function/useTimer";
 
 import { motion } from "framer-motion";
 
+import { GoFullScreenIcon, ExitFullScreenIcon } from "../../assets/svg/Icons";
+import { useStateContext } from "../../Function/ContextProvider";
 const Pomodero = () => {
   const [DisplayMessage, setDisplayMessage] = useState(false);
 
@@ -19,6 +21,7 @@ const Pomodero = () => {
   const [UseAudio, setUseAudio] = useState(0);
   const [AudioOption, setAudioOption] = useState(null);
 
+  const { IsFullScreen, setIsFullScreen } = useStateContext();
   const {
     formattedMinutes,
     formattedSeconds,
@@ -33,6 +36,10 @@ const Pomodero = () => {
     DisplayMessage,
     setDisplayMessage
   });
+
+  const handleFullScreen = () => {
+    setIsFullScreen(!IsFullScreen);
+  };
 
   const handleUpdateTimer = (type, newMinutes, newSeconds) => {
     if (type === "work") {
@@ -108,6 +115,15 @@ const Pomodero = () => {
               Reset
             </button>
           </div>
+          <div className="FullScreen__Toggle">
+            <button
+              className="Toggle__Button btn_outline"
+              onClick={handleFullScreen}
+            >
+              {IsFullScreen ? <ExitFullScreenIcon /> : <GoFullScreenIcon />}
+              Toggle Full Screen
+            </button>
+          </div>
         </div>
       </motion.div>
 
@@ -125,41 +141,7 @@ const Pomodero = () => {
       >
         {!startTimer && (
           <>
-            <div className="section Audio">
-              <Box className="Work__Section padding">
-                <div className="Audio__Option">
-                  <h2 className="Title">Audio</h2>
-                  <select
-                    name=""
-                    id=""
-                    className="Input Input__Audio"
-                    value={UseAudio}
-                    onChange={(e) => setUseAudio(e.target.value)}
-                  >
-                    <option value={0}>Off</option>
-                    <option value={1}>On</option>
-                  </select>
-                </div>
-                {UseAudio == 1 && (
-                  <>
-                    <div className="Preset__Container">
-                      <input
-                        type="range"
-                        name="volume"
-                        id="volume"
-                        className="Input"
-                        min={0}
-                        max={100}
-                        step={1}
-                      />
-                    </div>
-                    <div className="Preset__Container">
-                      <PresetCardAudio key={1} type="Rain" />
-                      <PresetCardAudio key={2} type="Ticking" />
-                    </div>
-                  </>
-                )}
-              </Box>
+            <div className="section">
               <Box className="Work__Section padding">
                 <h2 className="Title">Focusing Time</h2>
                 <div className="Preset__Container">

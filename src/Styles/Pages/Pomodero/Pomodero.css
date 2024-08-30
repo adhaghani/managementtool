@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .Pomodoro .Timer__Section .Time__Container .Timer {
   display: flex;
@@ -42,6 +43,11 @@
 }
 .Pomodoro .Timer__Section .Time__Container .Button__Container button {
   width: 150px;
+}
+.Pomodoro .Timer__Section .Time__Container .FullScreen__Toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 .Pomodoro .Input__Section {
   display: flex;
@@ -93,25 +99,6 @@
 }
 .Pomodoro .Input__Section .section.input .Work__Section {
   padding-top: 0px;
-}
-.Pomodoro .Input__Section .section.Audio .Work__Section {
-  padding-top: 0px;
-}
-.Pomodoro .Input__Section .section.Audio .Work__Section .Audio__Option {
-  display: flex;
-  align-items: center;
-  gap: var(--gap_l);
-  margin-bottom: var(--mg_s);
-}
-.Pomodoro .Input__Section .section.Audio .Work__Section .Audio__Option .Title {
-  margin-bottom: 0px;
-}
-.Pomodoro .Input__Section .section.Audio .Work__Section .Audio__Option .Input {
-  max-width: 100px;
-}
-.Pomodoro .Input__Section .section.Audio .Work__Section .Audio__Preset {
-  padding: var(--padding_s);
-  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
